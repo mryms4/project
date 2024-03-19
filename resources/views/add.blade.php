@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section('content')
   <div class="input-group mb-5 w-50 p-3"  >
     <p>please write your note:</p>

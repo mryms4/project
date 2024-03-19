@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.app')
 @section('content')
 <!DOCTYPE html>
 <html>
@@ -17,14 +17,15 @@ body  {
         <input type="checkbox" aria-label="Checkbox for following text input">
       </div>
     </div>
+    <form action="ToDoList" method="POST">
     <input type="text" class="form-control" aria-label="Text input with checkbox" style="background-color: #ffffff;"> 
-    <button type="submit" class="btn btn-outline-dark">Submit</button>
+    <input type="submit" class="btn btn-outline-light"></input>
   </div>
 </div>
 <div class="d-flex justify-content-left flex-column w-50" >
-  <button type="submit" class="btn btn-outline-dark ">Add</button>
-  <button type="submit" class="btn btn-outline-dark ">Edit</button>
-  <button type="submit" class="btn btn-outline-dark ">Delete</button>
-
+  <button type="submit" class="btn btn-outline-dark "><a href="add">Add</a></button>
+  <button type="submit" class="btn btn-outline-dark "><a href="edit">Edit</a></button>
+  <button type="submit" class="btn btn-outline-dark " ><a href="delete">Delete</a></button>
+</form>
 </div>
 @endsection
