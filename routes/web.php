@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,26 +14,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','App\Http\Controllers\ProjectController@index' );
 
+Route::get('/ToDoList' ,'App\Http\Controllers\ProjectController@index1');
 
-Route::get('/login' ,function(){
-    return view('login');
-});
+Route::get('/edit' ,'App\Http\Controllers\ProjectController@index2');
 
-Route::get('/ToDoList' ,function(){
-    return view('ToDoList');});
+Route::get('/add' ,'App\Http\Controllers\ProjectController@index3');
 
-Route::get('/edit' ,function(){
-    return view('edit');});
-
-Route::get('/add' ,function(){
-    return view('add');});
-
-Route::get('/delete' ,function(){
-    return view('delete');});
+Route::get('/delete' ,'App\Http\Controllers\ProjectController@index4');
 
 Auth::routes();
 
