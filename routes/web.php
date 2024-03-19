@@ -16,13 +16,13 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/','App\Http\Controllers\ProjectController@index' );
 
-Route::get('/ToDoList' ,'App\Http\Controllers\ProjectController@index1');
+Route::get('/ToDoList' ,'App\Http\Controllers\ProjectController@index1')->middleware('auth');
 
-Route::get('/edit' ,'App\Http\Controllers\ProjectController@index2');
+Route::get('/edit' ,'App\Http\Controllers\ProjectController@index2')->middleware('auth');
 
-Route::get('/add' ,'App\Http\Controllers\ProjectController@index3');
+Route::get('/add' ,'App\Http\Controllers\ProjectController@index3')->middleware('auth');
 
-Route::get('/delete' ,'App\Http\Controllers\ProjectController@index4');
+Route::get('/delete' ,'App\Http\Controllers\ProjectController@index4')->middleware('auth');
 
 Auth::routes();
 

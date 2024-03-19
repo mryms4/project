@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                        <a href="/ToDoList">Now you can write your to do list.</a>
                 </div>
             </div>
         </div>
